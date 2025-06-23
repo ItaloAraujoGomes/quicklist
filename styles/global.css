@@ -1,0 +1,29 @@
+:root {
+    /*Background colors*/
+    --background-primary: #F4F5FB;
+    --background-secondary: #ffffff;
+
+    /*Colors*/
+    --color-brand: #CA3884;
+    --content-secondary: #A52C6B;
+    --color-danger: ##C93847;
+
+    /*Content colors*/
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+
+    /*Border colors*/
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+/*-------------------------------------------------------------------------------------------*/
+
+    /*Fonts*/
+    --font-family:  "Inter", sans-serif;
+    --title: 700 24px/32px var(--font-family);
+    --label: 600 16px/20px var(--font-family);
+    --paragraph: 400 16px/20px var(--font-family);
+    --link: 400 14px/16px var(--font-family);
+}
