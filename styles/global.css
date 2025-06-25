@@ -1,3 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    background-color: var(--background-primary);
+}
+
 :root {
     /*Background colors*/
     --background-primary: #F4F5FB;
@@ -6,7 +14,7 @@
     /*Colors*/
     --color-brand: #CA3884;
     --content-secondary: #A52C6B;
-    --color-danger: ##C93847;
+    --color-danger: #C93847;
 
     /*Content colors*/
     --content-primary: #080B12;
@@ -24,6 +32,97 @@
     --font-family:  "Inter", sans-serif;
     --title: 700 24px/32px var(--font-family);
     --label: 600 16px/20px var(--font-family);
-    --paragraph: 400 16px/20px var(--font-family);
-    --link: 400 14px/16px var(--font-family);
+    --paragraph: 500 16px/20px var(--font-family);
+    --link: 500 14px/16px var(--font-family);
+}
+
+.container{
+    margin-inline: auto;
+    margin-top: 1.56rem;
+    max-width: 85.375rem;
+    padding-left: 369px;
+    padding-right: 370px;
+}
+
+#items{
+    display: grid;
+    gap: .75rem;
+    border: none;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    height: 3.1rem;
+    background-color: var(--background-secondary);
+    border-radius: .75rem;
+    border: none;
+    position: relative;
+
+
+
+    & [type="checkbox"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & .checkbox-image{
+        flex: 0 0 1.5rem;
+        height: 1.5rem;
+        background-image: url(/images/checkbox-default.svg);
+        background-repeat: no-repeat;
+        background-color: var(--background-secondary);
+        margin-left: .75rem;
+        margin-top: .5rem;
+    }
+    
+    &:hover, &:focus-within{
+        .checkbox-image{
+            background-image: url(/images/checkbox-hover.svg);
+            border-color: var(--border-hover);
+        }
+    }
+
+    &:has(:checked){
+        .checkbox-image{
+            background-image: url(/images/checkbox-selected.svg);
+        }
+    }
+
+    & label{
+        background-color: var(--background-secondary);
+        padding-left: .3rem;
+    }
+
+    & img{
+        background-color: var(--background-secondary);
+        margin-left: auto;
+        padding-right: .75rem;
+        
+    }
+}
+
+.removed{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--color-danger);
+    border-radius: .75rem;
+    padding-inline: .75rem;
+    margin-top: 2.375rem;
+    height: 2.75rem;
+    & p{
+        background-color: var(--color-danger);
+        color: var(--always-white);
+    }
+
+    & img{
+        background-color: var(--color-danger);
+        max-width: 20px;
+    }
+
+    & #delete{
+            margin-left: auto;
+        }
 }

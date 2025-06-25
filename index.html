@@ -9,10 +9,52 @@
     <link rel="stylesheet" href="/styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    
-    <h1>Italo</h1>
+<body class="container">
+    <header  id="logo">
+        <img src="/images/logo.svg" alt="">
+    </header>
+        
+    <main>
+        <div id="back">
+            <a href="#"><- Voltar</a>
+        </div>
 
+        <h1>Compras da semana   </h1>
+
+        <form>
+            <fieldset id="add">
+                <input type="text" name="newItem" id="newItem" placeholder="Adicione um novo item">
+                <button type="submit"> Adicionar item</button>
+            </fieldset>
+
+            <fieldset id="items">
+                <div class="item">
+                    <div class="checkbox-image"></div>
+                    <input type="checkbox" name="item" id="item">
+                    <label for="item">Pão de forma</label>
+                    <img src="/images/icon delete.svg" alt="">
+                </div>
+                <div class="item">
+                    <div class="checkbox-image"></div>
+                    <input type="checkbox" name="item" id="item">
+                    <label for="item">Café preto</label>
+                    <img src="/images/icon delete.svg" alt="">
+                </div>
+                <div class="item">
+                    <div class="checkbox-image"></div>
+                    <input type="checkbox" name="item" id="item">
+                    <label for="item">Suco de laranja</label>
+                    <img src="/images/icon delete.svg" alt="">
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="removed">
+            <img src="/images/warning-circle-filled.svg" alt="">
+            <p>O item foi removido da lista</p>
+            <img src="/images/delete-small.svg" alt="" id="delete">
+        </div>
+    </main>
     <script src="scripts.js"></script>
 </body>
 </html>
