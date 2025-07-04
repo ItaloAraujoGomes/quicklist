@@ -97,14 +97,14 @@
 
     & img{
         background-color: var(--background-secondary);
-        margin-left: auto;
+        margin-left: 90%;
         padding-right: .75rem;
+        position: absolute;
         
     }
 }
 
 .removed{
-    display: flex;
     align-items: center;
     gap: .5rem;
     background-color: var(--color-danger);
@@ -112,6 +112,7 @@
     padding-inline: .75rem;
     margin-top: 2.375rem;
     height: 2.75rem;
+    display: none;
     & p{
         background-color: var(--color-danger);
         color: var(--always-white);
@@ -125,4 +126,8 @@
     & #delete{
             margin-left: auto;
         }
+}
+
+.removed.show{
+    display: flex;
 }
